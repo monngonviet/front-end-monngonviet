@@ -10,7 +10,8 @@
 
 var Cozy;
 
-(function ($) { "use strict";
+(function ($) {
+    "use strict";
 
     $(document).ready(function () {
 
@@ -91,7 +92,7 @@ var Cozy;
                  * Create PrettyPhoto links
                  */
                 if ($("a[data-gal^='prettyPhoto']").length) {
-                    $("a[data-gal^='prettyPhoto']").prettyPhoto({theme: 'cozy', hook: 'data-gal', social_tools: false});
+                    $("a[data-gal^='prettyPhoto']").prettyPhoto({ theme: 'cozy', hook: 'data-gal', social_tools: false });
                 }
 
                 /**
@@ -236,7 +237,7 @@ var Cozy;
 
                 $('body').append(twitterBox);
 
-                $("#twitter-box").css({display: 'none'});
+                $("#twitter-box").css({ display: 'none' });
 
                 try {
                     $("#twitter-box").tweet({
@@ -266,7 +267,7 @@ var Cozy;
 
                 if ($("#new-properties-slider").length) {
                     $("#new-properties-slider").owlCarousel({
-                        itemsCustom : [
+                        itemsCustom: [
                             [0, 1],
                             [590, 2],
                             [751, 2],
@@ -283,7 +284,7 @@ var Cozy;
                         navigation: true,
                         navigationText: false,
                         pagination: false,
-                        itemsCustom : [
+                        itemsCustom: [
                             [0, 1],
                             [392, 2],
                             [596, 3],
@@ -298,32 +299,32 @@ var Cozy;
 
                 if ($("#testimonials-slider").length) {
                     $("#testimonials-slider").owlCarousel({
-                        singleItem : true,
-                        autoHeight : true,
+                        singleItem: true,
+                        autoHeight: true,
                         mouseDrag: false,
-                        transitionStyle : "fade"
+                        transitionStyle: "fade"
                     });
                 }
 
                 if ($("#featured-properties-slider").length) {
                     $(".fullwidthsingle .item").each(function () {
                         var $item = $(this);
-                        $('.image', $item).css({'background-image': 'url(' + $('.image img', $item).attr('src') + ')'});
+                        $('.image', $item).css({ 'background-image': 'url(' + $('.image img', $item).attr('src') + ')' });
                         $('.image img', $item).remove();
                     });
 
                     $("#featured-properties-slider").owlCarousel({
-                        singleItem : true,
-                        autoHeight : true,
+                        singleItem: true,
+                        autoHeight: true,
                         mouseDrag: false,
-                        transitionStyle : "fade"
+                        transitionStyle: "fade"
                     });
                 }
 
                 if ($("#latest-properties-slider").length) {
                     $(".fullwidthsingle2 .item").each(function () {
                         var $item = $(this);
-                        $('.image', $item).css({'background-image': 'url(' + $('.image img', $item).attr('src') + ')'});
+                        $('.image', $item).css({ 'background-image': 'url(' + $('.image img', $item).attr('src') + ')' });
                         $('.image img', $item).remove();
                     });
 
@@ -331,32 +332,32 @@ var Cozy;
                         navigation: true,
                         navigationText: false,
                         pagination: false,
-                        singleItem : true,
-                        autoHeight : true
+                        singleItem: true,
+                        autoHeight: true
                     });
                 }
 
                 if ($("#latest-news-slider").length) {
                     $(".latest-news-slider .item").each(function () {
                         var $item = $(this);
-                        $('.image', $item).css({'background-image': 'url(' + $('.image img', $item).attr('src') + ')'});
+                        $('.image', $item).css({ 'background-image': 'url(' + $('.image img', $item).attr('src') + ')' });
                         $('.image img', $item).remove();
                     });
 
                     $("#latest-news-slider").owlCarousel({
-                        singleItem : true,
-                        autoHeight : true,
+                        singleItem: true,
+                        autoHeight: true,
                         mouseDrag: false,
-                        transitionStyle : "fade"
+                        transitionStyle: "fade"
                     });
                 }
 
                 if ($("#twitter-slider").length) {
                     $("#twitter-slider").owlCarousel({
-                        singleItem : true,
-                        autoHeight : true,
+                        singleItem: true,
+                        autoHeight: true,
                         mouseDrag: false,
-                        transitionStyle : "fade"
+                        transitionStyle: "fade"
                     });
                 }
 
@@ -364,7 +365,7 @@ var Cozy;
                     var sync1 = $("#property-detail-large"),
                         sync2 = $("#property-detail-thumbs"),
 
-                        center  = function (number) {
+                        center = function (number) {
                             var sync2visible = sync2.data("owlCarousel").owl.visibleItems,
                                 num = number,
                                 found = false,
@@ -410,22 +411,22 @@ var Cozy;
 
                     $(".item", sync2).each(function () {
                         var $item = $(this);
-                        $item.css({'background-image': 'url(' + $('img', $item).attr('src') + ')'});
+                        $item.css({ 'background-image': 'url(' + $('img', $item).attr('src') + ')' });
                         $('img', $item).remove();
                     });
 
                     sync1.owlCarousel({
-                        singleItem : true,
-                        slideSpeed : 1000,
+                        singleItem: true,
+                        slideSpeed: 1000,
                         navigation: false,
                         pagination: false,
-                        autoHeight : true,
-                        afterAction : syncPosition,
-                        responsiveRefreshRate : 200
+                        autoHeight: true,
+                        afterAction: syncPosition,
+                        responsiveRefreshRate: 200
                     });
 
                     sync2.owlCarousel({
-                        itemsCustom : [
+                        itemsCustom: [
                             [0, 2],
                             [300, 3],
                             [629, 4],
@@ -434,8 +435,8 @@ var Cozy;
                             [1183, 5]
                         ],
                         pagination: true,
-                        responsiveRefreshRate : 100,
-                        afterInit : function (el) {
+                        responsiveRefreshRate: 100,
+                        afterInit: function (el) {
                             el.find(".owl-item").eq(0).addClass("synced");
                         }
                     });
@@ -487,8 +488,8 @@ var Cozy;
                 if ($('#freewall').length) {
                     $("#freewall .item").each(function () {
                         var $item = $(this);
-                        $item.width(Math.floor(200 +  200 * Math.random()));
-                        $item.css({'background-image': 'url(' + $('>img', $item).attr('src') + ')'});
+                        $item.width(Math.floor(200 + 200 * Math.random()));
+                        $item.css({ 'background-image': 'url(' + $('>img', $item).attr('src') + ')' });
                         $('>img', $item).remove();
                     });
 
@@ -513,7 +514,7 @@ var Cozy;
                 if (!$.browser.mobile) {
                     $.stellar();
                 } else {
-                    $('.parallax, #home-search-section').css({'background-position': '50% 50%', 'background-size': 'cover', 'background-attachment': 'scroll'});
+                    $('.parallax, #home-search-section').css({ 'background-position': '50% 50%', 'background-size': 'cover', 'background-attachment': 'scroll' });
                 }
             },
 
@@ -561,10 +562,10 @@ var Cozy;
                     ];
                 }
 
-                styledMap = new google.maps.StyledMapType(styles, {name: "Cozy"});
+                styledMap = new google.maps.StyledMapType(styles, { name: "Cozy" });
 
                 mapOptions = {
-                    center:  myLatlng,
+                    center: myLatlng,
                     zoom: $tis.agency_initialZoom,
                     scrollwheel: false,
                     panControl: false,
@@ -689,7 +690,7 @@ var Cozy;
                     ];
                 }
 
-                styledMap = new google.maps.StyledMapType(styles, {name: "Cozy"});
+                styledMap = new google.maps.StyledMapType(styles, { name: "Cozy" });
 
                 if (property_id !== undefined || property_id === null) {
                     latlng = new google.maps.LatLng(markers[property_id].latitude, markers[property_id].longitude);
@@ -824,7 +825,7 @@ var Cozy;
                     ];
                 }
 
-                styledMap = new google.maps.StyledMapType(styles, {name: "Cozy"});
+                styledMap = new google.maps.StyledMapType(styles, { name: "Cozy" });
 
                 if ($(window).innerWidth() <= 751) {
                     lng = markers[0].longitude;
@@ -835,7 +836,7 @@ var Cozy;
                 myLatlng = new google.maps.LatLng(markers[0].latitude, lng);
 
                 mapOptions = {
-                    center:  myLatlng,
+                    center: myLatlng,
                     zoom: map_zoom,
                     scrollwheel: false,
                     panControl: false,
@@ -939,11 +940,11 @@ var Cozy;
                     if (w >= 751) {
                         $(".sidebar").each(function () {
                             var h = $(this).closest(".content").find(".main").height();
-                            $(this).css({minHeight: (h + 135) + 'px'});
+                            $(this).css({ minHeight: (h + 135) + 'px' });
                         });
                     } else {
                         $(".sidebar").each(function () {
-                            $(this).css({"min-height": "0px"});
+                            $(this).css({ "min-height": "0px" });
                         });
                     }
                 }
@@ -957,13 +958,13 @@ var Cozy;
                 });
 
                 $("#opensearch").bind('click', function () {
-                    $("#home-advanced-search .container").css({"overflow": "hidden"});
+                    $("#home-advanced-search .container").css({ "overflow": "hidden" });
 
                     $("#home-advanced-search").toggleClass("open");
 
                     if ($("#home-advanced-search").hasClass("open")) {
                         setTimeout(function () {
-                            $("#home-advanced-search .container").css({"overflow": "visible"});
+                            $("#home-advanced-search .container").css({ "overflow": "visible" });
                         }, 400);
                     }
                 });
@@ -985,20 +986,20 @@ var Cozy;
                         $this.removeClass("fa-minus").addClass("fa-plus");
                         objHeight = $("#map-property-filter .row > div").height();
                         $("#map-property-filter .row > div")
-                            .css({"overflow": "hidden"})
-                            .animate({"height": "35px", "margin-top": "-83px"}, 300, function () {
-                                $("form", this).css({"visibility": "hidden"});
-                                $(this).animate({"width": "42px"}, 300);
+                            .css({ "overflow": "hidden" })
+                            .animate({ "height": "35px", "margin-top": "-83px" }, 300, function () {
+                                $("form", this).css({ "visibility": "hidden" });
+                                $(this).animate({ "width": "42px" }, 300);
                                 animating = false;
                             });
 
                     } else {
                         $this.removeClass("fa-plus").addClass("fa-minus");
                         $("#map-property-filter .row > div")
-                            .animate({"width": "100%"}, 300, function () {
-                                $("form", this).css({"visibility": "visible"});
-                                $(this).animate({"height": objHeight + "px", "margin-top": "-200px"}, 300, function () {
-                                    $(this).css({"overflow": "visible", "height": "auto"});
+                            .animate({ "width": "100%" }, 300, function () {
+                                $("form", this).css({ "visibility": "visible" });
+                                $(this).animate({ "height": objHeight + "px", "margin-top": "-200px" }, 300, function () {
+                                    $(this).css({ "overflow": "visible", "height": "auto" });
                                     animating = false;
                                 });
                             });
@@ -1019,20 +1020,20 @@ var Cozy;
                         objHeight = $("#contacts-overlay").height();
                         objWidth = $("#contacts-overlay").width();
                         $("#contacts-overlay")
-                            .css({"overflow": "hidden"})
-                            .animate({"height": "35px", "margin-top": "-83px"}, 300, function () {
-                                $("ul", this).css({"visibility": "hidden"});
-                                $(this).animate({"width": "42px", "min-width": "42px"}, 300);
+                            .css({ "overflow": "hidden" })
+                            .animate({ "height": "35px", "margin-top": "-83px" }, 300, function () {
+                                $("ul", this).css({ "visibility": "hidden" });
+                                $(this).animate({ "width": "42px", "min-width": "42px" }, 300);
                                 animating = false;
                             });
 
                     } else {
                         $this.removeClass("fa-plus").addClass("fa-minus");
                         $("#contacts-overlay")
-                            .animate({"min-width": objWidth + "px", "width": "auto"}, 300, function () {
-                                $("ul", this).css({"visibility": "visible"});
-                                $(this).animate({"height": objHeight + "px", "margin-top": "-200px"}, 300, function () {
-                                    $(this).css({"overflow": "visible", "height": "auto"});
+                            .animate({ "min-width": objWidth + "px", "width": "auto" }, 300, function () {
+                                $("ul", this).css({ "visibility": "visible" });
+                                $(this).animate({ "height": objHeight + "px", "margin-top": "-200px" }, 300, function () {
+                                    $(this).css({ "overflow": "visible", "height": "auto" });
                                     animating = false;
                                 });
                             });
@@ -1079,11 +1080,11 @@ var Cozy;
             initCountUp: function () {
 
                 var options = {
-                        useEasing : true,
-                        useGrouping : true,
-                        separator : ',',
-                        decimal : '.'
-                    },
+                    useEasing: true,
+                    useGrouping: true,
+                    separator: ',',
+                    decimal: '.'
+                },
                     timers = [],
                     checkViewPort;
 
@@ -1319,7 +1320,7 @@ var Cozy;
                 });
             },
 
-            animateElems : function () {
+            animateElems: function () {
 
                 var animate = function () {
                     $('[data-animation-delay]').each(function () {
@@ -1360,4 +1361,22 @@ var Cozy;
 
         Cozy.init();
     });
-    }(jQuery));
+}(jQuery));
+
+
+$('.carousel[data-type="multi"] .item').each(function () {
+    var next = $(this).next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    for (var i = 0; i < 1; i++) {
+        next = next.next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+
+        next.children(':first-child').clone().appendTo($(this));
+    }
+});

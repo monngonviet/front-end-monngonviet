@@ -2382,7 +2382,7 @@ iframe[src="about:blank"] {
 }
 
 .navbar-nav>li>a {
-  padding: 0 6px;
+  padding: 0 14px;
   display: block;
   color: #74777c;
   line-height: 102px;
@@ -8841,6 +8841,7 @@ a.banner-mnv img {
 
 .sidebar-mnv {
   padding-top: 10px;
+  padding-bottom: 0px;
 }
 
 .sidebar-mnv-li li {
@@ -8848,24 +8849,74 @@ a.banner-mnv img {
 }
 
 .title-news {
-  background: #f1a81e;
+  background: #e3b943;
   padding: 10px;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
 }
 
-.border-top-row{
-  margin-top: 10px;
-    border-top: 1px solid;
-}
-.border-left-right{
-  border-left: 1px solid;
-    border-right: 1px solid;
+.villages {
+  background-color: #70c067!important;
 }
 
-.padding-none-mnv{
+.times {
+  background-color: #6e79b9!important;
+}
+
+.events {
+  background-color: #be4d9b!important;
+}
+
+.popular {
+  background-color: #92571f!important;
+}
+
+.community {
+  background-color: #f82313!important;
+}
+
+.culinary-culture {
+  background-color: #6ab4b3!important;
+}
+
+.video {
+  background-color: #828303!important;
+}
+
+.border-top-row {
+  margin-top: 10px;
+  border-top: 1px solid;
+}
+
+.border-left-right {
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.padding-none-mnv {
   padding: 0;
 }
 
+.new-nav-mnv {
+  margin: 0;
+  width: auto;
+}
 
+.carousel-control {
+  width: 4%;
+}
+
+.carousel-control.left, .carousel-control.right {
+  margin-left: 15px;
+  background-image: none;
+}
+
+
+i.glyphicon.glyphicon-chevron-right {
+  margin-top: -55px;
+}
+
+i.glyphicon.glyphicon-chevron-left {
+  margin-top: -55px;
+}
