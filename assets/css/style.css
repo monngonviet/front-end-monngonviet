@@ -48,7 +48,7 @@ a:focus {
 
 h1, h2, h3, h4, h5, h6 {
   /* font-family: 'Raleway', sans-serif; */
-  color: #df4a43;
+  /* color: #df4a43; */
   font-weight: 300;
   margin: 0;
   text-transform: uppercase;
@@ -111,7 +111,7 @@ body {
 }
 
 a {
-  color: #df4a43;
+  color: #f9f7f6;
 }
 
 a:hover, a:focus {
@@ -8931,4 +8931,10 @@ i.glyphicon.glyphicon-chevron-left {
 li.dropdown.dropdown-mnv.menu-footer a {
   padding: 0 10px;
   font-weight: 600;
+}
+
+.text-slide-mnv{
+  text-align: left;
+  left: 5%;
+  right: 5%;
 }
